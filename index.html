@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatral Enterprise | Heavy Load Transport</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+    <header class="bg-white border-b sticky top-0 z-50 shadow-sm relative">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-blue-900 font-bold text-xl tracking-tighter">GATRAL</span>
+                <span class="text-red-600 font-bold text-xl ml-1">ENTERPRISE</span>
+            </div>
+            
+            <nav class="hidden lg:flex space-x-6 text-xs font-semibold uppercase tracking-wider text-gray-600">
+                <a href="#" class="hover:text-red-600 transition">Overview</a>
+                <a href="#Services" class="hover:text-red-600 transition">Why Choose Us?</a>
+                <a href="#Fleet" class="hover:text-red-600 transition">Our Fleet</a>
+                <a href="#Gallery" class="hover:text-red-600 transition">Gallery</a>
+                <a href="#Location" class="hover:text-red-600 transition">Location</a>
+                <a href="#Contact" class="hover:text-red-600 transition">Get In Touch</a>
+            </nav>
+            
+            <div class="hidden md:block border border-gray-300 rounded-full px-4 py-1.5 text-sm font-medium hover:bg-gray-50 transition cursor-pointer">
+                📞 +91 9574776164
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-gray-900 focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t absolute w-full left-0 shadow-lg">
+            <nav class="flex flex-col px-4 py-2 space-y-1 text-sm font-semibold uppercase tracking-wider text-gray-700">
+                <a href="#" class="hover:text-red-600 transition block py-3 border-b">Overview</a>
+                <a href="#Services" class="hover:text-red-600 transition block py-3 border-b">Why Choose Us?</a>
+                <a href="#Fleet" class="hover:text-red-600 transition block py-3 border-b">Our Fleet</a>
+                <a href="#Gallery" class="hover:text-red-600 transition block py-3 border-b">Gallery</a>
+                <a href="#Location" class="hover:text-red-600 transition block py-3 border-b">Location</a>
+                <a href="#Contact" class="hover:text-red-600 transition block py-3">Get In Touch</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">Book Truck & Part<br>Load Service</h1>
+            <p class="text-gray-700 font-semibold mt-4 text-lg">India's 1st Online Booking Platform with Live Pricing</p>
+            
+            <div class="flex justify-center gap-10 mt-10 mb-6">
+                <div id="partLoadTab" class="tab-btn active" onclick="switchTab('partLoadTab')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/407/407826.png" alt=""> Part Load
+                </div>
+                <div id="fullLoadTab" class="tab-btn" onclick="switchTab('fullLoadTab')">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2611/2611158.png" alt=""> Full Load
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="pickupCity" placeholder="Enter pickup city" class="search-input">
+                <input type="text" id="dropCity" placeholder="Enter drop city" class="search-input">
+                <button class="btn-check">Check price</button>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-12">
+                <a href="tel:+919574776164"
+                    class="bg-blue-700 hover:bg-blue-800 px-8 py-3 rounded-md flex items-center justify-center gap-2 transition font-semibold text-white">
+                    <i data-lucide="phone" class="w-4 h-4"></i> Call For Booking
+                </a>
+                <a href="https://wa.me/919574776164"
+                    class="bg-green-600 hover:bg-green-700 px-8 py-3 rounded-md flex items-center justify-center gap-2 transition font-semibold text-white">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-4 -mt-16 relative z-10">
+        <div class="bg-white rounded-xl shadow-xl grid grid-cols-2 md:grid-cols-4 p-6 md:p-8 text-center gap-6 md:gap-8">
+            <div>
+                <i data-lucide="award" class="w-8 h-8 mx-auto text-blue-900 mb-2"></i>
+                <div class="font-bold text-xl">5+ Years</div>
+                <div class="text-xs text-gray-500 uppercase">Experience</div>
+            </div>
+            <div>
+                <i data-lucide="globe" class="w-8 h-8 mx-auto text-blue-900 mb-2"></i>
+                <div class="font-bold text-xl">All India</div>
+                <div class="text-xs text-gray-500 uppercase">Permit</div>
+            </div>
+            <div>
+                <i data-lucide="map-pin" class="w-8 h-8 mx-auto text-blue-900 mb-2"></i>
+                <div class="font-bold text-xl">GPS Enabled</div>
+                <div class="text-xs text-gray-500 uppercase">Real-Time Track</div>
+            </div>
+            <div>
+                <i data-lucide="shield-check" class="w-8 h-8 mx-auto text-blue-900 mb-2"></i>
+                <div class="font-bold text-xl">Trusted By</div>
+                <div class="text-xs text-gray-500 uppercase">Ghadi & Tata</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-20 container mx-auto px-4" id="Services">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl">What we do!</h2>
+            <div class="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-sm border-b-4 border-blue-900 hover:shadow-lg transition">
+                <div class="bg-blue-50 w-12 h-12 rounded flex items-center justify-center mb-6">
+                    <i data-lucide="truck" class="text-blue-900"></i>
+                </div>
+                <h3 class="text-xl mb-4">Bulk Material Transport</h3>
+                <ul class="text-sm text-gray-600 space-y-3">
+                    <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                            class="w-4 h-4 text-red-600 mt-1 flex-shrink-0"></i> Soda Ash, Coal, Sand, Salt and Peanuts delivery.
+                    </li>
+                    <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                            class="w-4 h-4 text-red-600 mt-1 flex-shrink-0"></i> Specialists in Factory-to-Destination logistics.</li>
+                </ul>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm border-b-4 border-red-600 hover:shadow-lg transition">
+                <div class="bg-red-50 w-12 h-12 rounded flex items-center justify-center mb-6">
+                    <i data-lucide="settings" class="text-red-600"></i>
+                </div>
+                <h3 class="text-xl mb-4">Heavy Machinery & Rental</h3>
+                <ul class="text-sm text-gray-600 space-y-3">
+                    <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                            class="w-4 h-4 text-red-600 mt-1 flex-shrink-0"></i> JCB and Hydra Crane available for loading.</li>
+                    <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                            class="w-4 h-4 text-red-600 mt-1 flex-shrink-0"></i> Return trip logistics solutions (Saurashtra).</li>
+                </ul>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm border-b-4 border-blue-900 hover:shadow-lg transition">
+                <div class="bg-blue-50 w-12 h-12 rounded flex items-center justify-center mb-6">
+                    <i data-lucide="warehouse" class="text-blue-900"></i>
+                </div>
+                <h3 class="text-xl mb-4">Seasonal & Warehouse</h3>
+                <ul class="text-sm text-gray-600 space-y-3">
+                    <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                            class="w-4 h-4 text-red-600 mt-1 flex-shrink-0"></i> Delivery from warehouse in Peanuts season</li>
+                    <li class="flex items-start gap-2"><i data-lucide="check-circle"
+                            class="w-4 h-4 text-red-600 mt-1 flex-shrink-0"></i> Timely seasonal logistics management.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100" id="Fleet">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl mb-2">Our strength (Our Fleet)</h2>
+            <p class="text-gray-500 mb-10 text-sm">We do not hire vehicles from the market, we have our own fleet.</p>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-6 rounded border-l-4 border-blue-900 shadow-sm hover:shadow-md transition">
+                    <div class="text-4xl font-bold mb-1 text-blue-950">07</div>
+                    <div class="font-semibold text-sm">Heavy Trucks</div>
+                    <div class="text-xs text-gray-400 mt-1">Tata 18-wheelers (Open body & Dumpers)</div>
+                </div>
+                <div class="bg-white p-6 rounded border-l-4 border-blue-900 shadow-sm hover:shadow-md transition">
+                    <div class="text-4xl font-bold mb-1 text-blue-950">04</div>
+                    <div class="font-semibold text-sm">Excavators</div>
+                    <div class="text-xs text-gray-400 mt-1">JCB Machines for Heavy Work</div>
+                </div>
+                <div class="bg-white p-6 rounded border-l-4 border-blue-900 shadow-sm hover:shadow-md transition">
+                    <div class="text-4xl font-bold mb-1 text-blue-950">01</div>
+                    <div class="font-semibold text-sm">Cranes</div>
+                    <div class="text-xs text-gray-400 mt-1">Hydra Crane for Loading/Unloading</div>
+                </div>
+                <div class="bg-white p-6 rounded border-l-4 border-blue-900 shadow-sm hover:shadow-md transition">
+                    <div class="text-4xl font-bold mb-1 text-blue-950">02</div>
+                    <div class="font-semibold text-sm">Tractors</div>
+                    <div class="text-xs text-gray-400 mt-1">Tractors for local support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 container mx-auto px-4" id="Gallery">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl">Our glimpses (Gallery)</h2>
+            <div class="h-1 w-20 bg-red-600 mx-auto mt-4"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="group relative overflow-hidden rounded-lg shadow-sm h-64">
+                <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=800" alt="Heavy Trucks" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition">
+                    <span class="text-white font-semibold">Our Tata Fleet</span>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-lg shadow-sm h-64">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/9/344052282/WQ/SP/GF/125461094/full-truck-load-transport-service-500x500.png" alt="Excavator" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition">
+                    <span class="text-white font-semibold">JCB Loading Work</span>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-lg shadow-sm h-64">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800" alt="Warehouse" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition">
+                    <span class="text-white font-semibold">Logistics & Storage</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50" id="Location">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl mb-4">Find Us</h2>
+            <div class="h-1 w-20 bg-red-600 mx-auto mb-12"></div>
+            <div class="bg-white p-4 rounded-lg shadow-md h-96 overflow-hidden max-w-5xl mx-auto">
+                <iframe src="https://maps.google.com/maps?q=Hotel+Gatral,+1+Porbandar+Dwarka+Highway,+near+Kuranga,+Dwarka,+Gujarat+361335&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-950 text-white py-16" id="Contact">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl mb-4">GET IN TOUCH</h2>
+                <p class="text-blue-200 mb-8 italic">"Need transport or heavy machinery? Call us now."</p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-800 p-3 rounded-full"><i data-lucide="phone" class="w-5 h-5"></i></div>
+                        <div>
+                            <p class="text-xs text-blue-300">Phone</p>
+                            <p class="font-bold">+91 9574776164</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-800 p-3 rounded-full"><i data-lucide="mail" class="w-5 h-5"></i></div>
+                        <div>
+                            <p class="text-xs text-blue-300">Email</p>
+                            <p class="font-bold">mayurdevrajkariya@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-800 p-3 rounded-full"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+                        <div>
+                            <p class="text-xs text-blue-300">Head Office</p>
+                            <p class="font-bold">Near Gatral Hotel, Kuranga, Dist. Dwarka, Gujarat - 361333.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white text-gray-900 p-6 md:p-8 rounded-xl shadow-2xl">
+                <h3 class="text-xl mb-6 font-bold">Quick Enquiry</h3>
+                <form class="space-y-4">
+                    <div>
+                        <label class="text-xs font-bold text-gray-500 block mb-1">Your Name</label>
+                        <input type="text" placeholder="Enter your name"
+                            class="w-full border rounded p-2 text-sm focus:outline-blue-900 focus:ring-1 focus:ring-blue-900">
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold text-gray-500 block mb-1">Mobile Number</label>
+                        <input type="tel" placeholder="Enter your mobile number"
+                            class="w-full border rounded p-2 text-sm focus:outline-blue-900 focus:ring-1 focus:ring-blue-900">
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold text-gray-500 block mb-1">Inquiry Type</label>
+                        <select class="w-full border rounded p-2 text-sm focus:outline-blue-900 focus:ring-1 focus:ring-blue-900">
+                            <option>Bulk Transport</option>
+                            <option>Machinery Rental</option>
+                            <option>Logistics Inquiry</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="text-xs font-bold text-gray-500 block mb-1">Message</label>
+                        <textarea rows="3" placeholder="How can we help you?"
+                            class="w-full border rounded p-2 text-sm focus:outline-blue-900 focus:ring-1 focus:ring-blue-900"></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded transition shadow-md">Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+        <div
+            class="container mx-auto px-4 mt-16 pt-8 border-t border-blue-900 flex flex-col md:flex-row justify-between items-center text-xs text-blue-400 gap-4">
+            <div>
+                <span class="text-white font-bold text-lg tracking-tight">GATRAL</span><span class="text-red-500 font-bold text-lg ml-1">ENTERPRISE</span>
+            </div>
+            <p>© 2026 Gatral Enterprise. All Rights Reserved.</p>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // TAB SWITCHING LOGIC
+        function switchTab(tabId) {
+            // Remove active class from both
+            document.getElementById('partLoadTab').classList.remove('active');
+            document.getElementById('fullLoadTab').classList.remove('active');
+            
+            // Add active class to clicked tab
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // MOBILE MENU TOGGLE LOGIC
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Optional: Close menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
