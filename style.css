@@ -1,3 +1,6 @@
+html,body{
+    scroll-behavior: smooth;
+}
 .hero-section {
     background-color: #ffffff;
     padding: 80px 0 120px 0;
